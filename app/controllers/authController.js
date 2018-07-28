@@ -1,3 +1,4 @@
+const bcrypt = require('bcryptjs');
 const { User } = require('../models');
 
 module.exports = {
@@ -16,7 +17,8 @@ module.exports = {
       return res.redirect('back');
     }
 
-    await User.create(req.body);
+    const password = await bcrypt.hash(req.body.password, 5);
+    await User.create({ ...req.body, password });
 
     return res.redirect('/');
   },
