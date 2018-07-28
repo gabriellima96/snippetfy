@@ -1,0 +1,28 @@
+{
+  "name": "snippetfy",
+  "version": "1.0.0",
+  "description": "snippetfy-gonode",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gabriellima96/snippetfy-gonode.git"
+  },
+  "author": "Gabriel Lima",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gabriellima96/snippetfy-gonode/issues"
+  },
+  "homepage": "https://github.com/gabriellima96/snippetfy-gonode#readme",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.3"
+  },
+  "devDependencies": {
+    "eslint": "^5.2.0",
+    "eslint-config-airbnb-base": "^13.0.0",
+    "eslint-plugin-import": "^2.13.0"
+  }
+}
