@@ -3,6 +3,10 @@ const bodyParser = require('body-parser');
 const nunjucks = require('nunjucks');
 const path = require('path');
 
+const { User } = require('./app/models');
+
+User.create({ name: 'Gabriel', email: 'gabriel@gmail.com', password: '123456' });
+
 const app = express();
 
 nunjucks.configure(path.resolve('app', 'views'), {
