@@ -4,7 +4,8 @@
   "description": "snippetfy-gonode",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon -e js,json,njk"
   },
   "repository": {
     "type": "git",
