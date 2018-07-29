@@ -39,6 +39,7 @@ routes.get('/app/categories/:id', categoryController.show);
 /**
  * SNIPPETS
  */
+routes.get('/app/categories/:categoryId/snippets/:id', snippetController.show);
 routes.post('/app/categories/:categoryId/snippets/create', snippetController.store);
 
 /**
