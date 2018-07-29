@@ -1,6 +1,8 @@
 const express = require('express');
 const authController = require('./controllers/authController');
 const dashboardController = require('./controllers/dashboardController');
+const categoryController = require('./controllers/categoryController');
+
 
 const authMiddleware = require('./middlewares/auth');
 const guestMiddleware = require('./middlewares/guest');
@@ -21,6 +23,8 @@ routes.post('/authenticate', authController.authenticate);
 
 routes.use('/app', authMiddleware);
 routes.get('/app/dashboard', dashboardController.index);
+
+routes.post('/app/categories/create', categoryController.store);
 
 routes.use((req, res) => res.render('errors/404'));
 
