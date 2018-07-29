@@ -22,6 +22,7 @@ app.set('view engine', 'njk');
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(session(sessionConfig));
 app.use(flash());
+
 app.use('/', routes);
 
 app.listen(3000);
