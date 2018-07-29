@@ -21,4 +21,14 @@ routes.post('/authenticate', authController.authenticate);
 
 routes.use('/app', authMiddleware);
 routes.get('/app/dashboard', dashboardController.index);
+
+routes.use((err, req, res, _next) => {
+  res.status(err.status || 500);
+
+  return res.render('errors/index', {
+    message: err.message,
+    error: process.env.NODE_ENV === 'production' ? {} : err,
+  });
+});
+
 module.exports = routes;
